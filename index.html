@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="./img/motorcycle.png" />
+      <link rel="stylesheet" href="style.css" />
+      <script defer src="index.js"></script>
+      <script
+         defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXEdAgTc7DAJ67BeqsaCim9gOJnogeVRQ&libraries=places&callback=initMap"
+      ></script>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <title>Road Trip Planner</title>
+   </head>
+   <body>
+      <div id="header">
+         <h1>Road Trip Planner</h1>
+         <p>
+            -weather data available from now-<br />
+            48 hours: hourly weather<br />
+            2 - 7 days: daily weather<br />
+            8+ days: just directions
+         </p>
+         <h2 id="errors"></h2>
+      </div>
+      <div id="flex-container">
+         <div id="input">
+            <h3>Trip Details</h3>
+            <form>
+               <div id="date-time-div">
+                  <input type="date" name="date" id="date" required />
+                  <input type="time" name="time" id="time" value="11:00" required />
+               </div>
+               <div>
+                  <input
+                     type="text"
+                     id="start"
+                     name="input0"
+                     placeholder="Starting Location"
+                     required
+                  />
+                  <datalist id="my-location">
+                     <option value="My current location"></option>
+                  </datalist>
+               </div>
+               <div id="waypoints"></div>
+               <p>..add more stops here..</p>
+               <div>
+                  <input
+                     type="text"
+                     id="end"
+                     name="input1"
+                     placeholder="Ending Location"
+                     required
+                  />
+               </div>
+               <div id="button-div">
+                  <button id="add-stop" type="button">Add a Stop</button>
+                  <button id="submit" type="submit">Submit</button>
+               </div>
+            </form>
+         </div>
+         <div id="map"></div>
+      </div>
+      <h2 style="text-align: center">Directions</h2>
+      <div id="directions">..will appear here</div>
+      <div id="footer">
+         <div id="copywright"></div>
+         <div>
+            Weather data and icons are from
+            <a href="http://https://openweathermap.org/" title="Open Weather Map"
+               >Open Weather Map</a
+            >
+         </div>
+         <div>
+            Motorcycle icon made by
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank"
+               >Freepik</a
+            >
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon" target="_blank"
+               >www.flaticon.com</a
+            >
+         </div>
+      </div>
+   </body>
+</html>

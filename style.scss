@@ -1,0 +1,227 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+}
+
+#header {
+   padding: 30px;
+   min-height: 200px;
+   text-align: center;
+
+   #errors {
+      margin: 0;
+      background-color: rgb(39, 0, 0);
+      color: white;
+   }
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+#flex-container {
+   display: flex;
+   margin: 0 20px;
+   min-height: 80vh;
+
+   #input {
+      background-color: white;
+      padding: 20px;
+      width: 350px;
+      min-height: 100%;
+      border: 1px black solid;
+
+      h3 {
+         text-align: center;
+      }
+
+      input {
+         height: 30px;
+         margin-bottom: 20px;
+      }
+
+      input::placeholder {
+         text-align: center;
+      }
+
+      #date {
+         width: 58%;
+         text-align: center;
+      }
+
+      #time {
+         width: 40%;
+         text-align: center;
+      }
+
+      #start,
+      #end {
+         width: 100%;
+      }
+      #waypoints {
+         input {
+            width: 70%;
+            margin-right: 5%;
+         }
+         select {
+            width: 25%;
+            height: 30px;
+         }
+      }
+
+      p {
+         margin-top: 0;
+         text-align: center;
+      }
+      #button-div {
+         position: relative;
+
+         button {
+            width: 40%;
+         }
+
+         #add-stop {
+            display: inline-block;
+            height: 30px;
+         }
+
+         #submit {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            height: 30px;
+         }
+      }
+   }
+
+   #map {
+      flex: 1;
+      min-height: 100%;
+   }
+   .weather-info-window {
+      text-align: center;
+
+      img {
+         margin: -15px 0;
+      }
+
+      .weather-details {
+         background-color: transparent;
+         border: none;
+         border-radius: 5px;
+         color: blue;
+      }
+
+      hr {
+         width: 80%;
+      }
+   }
+
+   .hourly-weather {
+      width: 1000px;
+
+      .hourly-weather-middle {
+         box-shadow: 2px 2px 8px rgb(146, 146, 146);
+         border-radius: 8px;
+         margin: 10px auto;
+         height: 145px;
+         width: max-content;
+         box-sizing: content-box;
+         background-color: white;
+         padding: 5px;
+
+         div {
+            text-align: center;
+         }
+
+         .hourly-weather-inside {
+            margin-top: 5px;
+            div {
+               display: inline-block;
+               border-left: 1px solid black;
+               width: 90px;
+            }
+            div:first-child {
+               border-left: none;
+            }
+            img {
+               margin: -20px -10px;
+            }
+         }
+      }
+   }
+}
+
+.pac-container {
+   min-width: 400px;
+}
+
+.my-pac-item {
+   color: #000;
+
+   .my-pac-icon {
+      background-image: url(./img/gps.png);
+      width: 15px;
+      height: 20px;
+      margin-right: 7px;
+      margin-top: 6px;
+      display: inline-block;
+      vertical-align: top;
+      background-size: 15px;
+      background-repeat: no-repeat;
+   }
+
+   .my-pac-text {
+      font-size: 13px;
+   }
+}
+
+#directions {
+   max-width: 700px;
+   margin: auto auto 200px auto;
+   text-align: center;
+}
+
+#footer {
+   min-height: 200px;
+   padding: 40px;
+   text-align: center;
+   background-color: rgb(78, 78, 78);
+   color: white;
+}
+
+@media only screen and (max-width: 900px) {
+   #flex-container {
+      display: block;
+      height: auto;
+
+      #input {
+         flex: 0;
+         width: 100%;
+         height: auto;
+
+         #date-time-div {
+            margin: auto;
+            width: 260px;
+         }
+      }
+
+      #map {
+         width: 100%;
+         height: 500px;
+      }
+   }
+
+   .pac-container {
+      min-width: 100%;
+   }
+
+   #directions {
+      margin-right: 20px;
+      margin-left: 20px;
+   }
+}
