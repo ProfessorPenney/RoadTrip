@@ -1,3 +1,3 @@
 # RoadTrip
 
-visible at weather.penneyprojects.com
+https://weather.penneyprojects.com
